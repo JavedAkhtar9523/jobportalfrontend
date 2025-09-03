@@ -931,7 +931,7 @@ export default function SpreadsSignIn() {
                 <div className="flex items-center space-x-1">
                   <span className="text-gray-500">New to Spreads?</span>
                   <button
-                    onClick={() => router.push("/register")}
+                    onClick={() => router.push("/signup")}
                     className="text-blue-600 hover:text-blue-700 font-medium hover:underline"
                   >
                     Sign Up
@@ -970,7 +970,7 @@ export default function SpreadsSignIn() {
               <p className="text-sm text-gray-500">
                 Don't have an account?{" "}
                 <button
-                  onClick={() => router.push("/register")}
+                  onClick={() => router.push("/signup")}
                   className="text-blue-600 hover:text-blue-700 font-medium hover:underline"
                 >
                   Register here
