@@ -1,0 +1,88 @@
+import React from "react";
+import Button from "../button/Button";
+import { StaggeredContainer, AnimatedWrapper } from "../animation/animation";
+
+const whyChooseUsData = [
+  {
+    img: "/Community.png",
+    title: "Built-in Career Community",
+    desc: "Join real discussions with students, mentors, recruiters, and alumni.",
+  },
+  {
+    img: "/monetization.png",
+    title: "Monetization Made Easy",
+    desc: "Earn through branded content, creator ads, premium content, or referrals. We reward meaningful contribution.",
+  },
+  {
+    img: "/circle-based.png",
+    title: "Circle-based Community",
+    desc: "Create or join circles around interests, colleges, jobs, or industries. Stay connected. Stay inspired.",
+  },
+  {
+    img: "/built-in-ats.png",
+    title: "Built-in ATS & Hiring Engine",
+    desc: "AI-optimized job matches, auto-apply, and recruiter tools that simplify hiring.",
+  },
+];
+
+export default function WhyChooseUs() {
+  return (
+    <section className="w-full px-4 md:px-16 py-12 bg-white">
+      <div className="flex flex-col lg:flex-row justify-between items-center py-8 gap-10">
+        <div className="w-full lg:w-[45%] space-y-4">
+          <h3 className="text-3xl md:text-5xl  font-bold">Why Choose US ?</h3>
+          <p className="  font-medium font-jost text-gray-500 text-lg leading-tight">
+            India’s Career, Creator & Community Platform for the Next Generation
+          </p>
+          <p className="text-gray-500 font-jost font-medium text-lg">
+            Because your voice deserves more than likes — it deserves legacy.
+            <br />
+            Spreads is where creators, job seekers, and communities come to
+            grow, connect, and rise.
+            <br />
+            From your first resume to your next big story, this is where your
+            journey begins.
+          </p>
+
+          <Button
+            href="/skills"
+            linkclassname="rounded-full"
+            name="Grow with Your Circle"
+          />
+        </div>
+
+        <div className=" w-full lg:w-[890px] h-[370px] lg:h-[500px] relative">
+          <video
+            src="/testing.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+
+      <StaggeredContainer className="mt-12 px-3.5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-7 xl:gap-12">
+        {whyChooseUsData.map((item, index) => (
+          <AnimatedWrapper
+            delay={index * 0.4}
+            direction="up"
+            key={index}
+            className="rounded-4xl bg-[#eaf3ff80]  hover:shadow-sm hover:translate-y-2  p-4 transition duration-300"
+          >
+            <img
+              src={item.img}
+              alt={item.title}
+              className="w-full h-52 object-cover rounded-4xl mb-4"
+            />
+            <h4 className="font-semibold text-lg text-gray-800">
+              {item.title}
+            </h4>
+            <p className=" text-[#565656]">{item.desc}</p>
+          </AnimatedWrapper>
+        ))}
+      </StaggeredContainer>
+    </section>
+  );
+}
