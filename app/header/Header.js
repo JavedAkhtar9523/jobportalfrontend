@@ -1397,7 +1397,7 @@ const Header = () => {
   // Handle logout
   const handleLogout = () => {
     dispatch(logoutUser());
-    router.push("/login");
+    router.push("/signin");
     setMobileMenuOpen(false);
   };
 
