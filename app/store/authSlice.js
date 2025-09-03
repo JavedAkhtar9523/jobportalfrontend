@@ -175,7 +175,8 @@ import { toast } from "react-toastify";
 // const API_BASE_URL = "http://localhost:5000/api";
 // Environment variable use karte hue API URL
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_BASE_URL || "https://jobportalambi.onrender.com";
+  process.env.NEXT_PUBLIC_API_BASE_URL ||
+  "https://jobportalambi.onrender.com/api";
 
 export const registerUser = createAsyncThunk(
   "auth/registerUser",
